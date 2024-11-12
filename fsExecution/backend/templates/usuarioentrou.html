@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuário Entrou</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="card">
+
+      <h2 class="title">Boas-vindas, {{ nome }}!</h2>
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <ul class="flashes">
+        {% for category, message in messages %} {% if 'login_success' in
+        category %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endif %} {% endfor %}
+      </ul>
+      {% endif %} {% endwith %}
+
+      <nav class="navigation">
+        <ul class="list">
+          <li class="list__element">
+            <a class="button" href="{{ url_for('novatarefa') }}"
+              >Registrar Nova Tarefa</a
+            >
+          </li>
+          <li class="list__element">
+            <a class="button" href="{{ url_for('minhastarefas') }}"
+              >Minhas Tarefas</a
+            >
+          </li>
+          <li class="list__element">
+            <a class="button" href="{{ url_for('home') }}">Sair</a>
+          </li>
+          <li class="list__element">
+            <a
+            class="delete-account"
+              href="{{ url_for('excluirusuario') }}"
+              >Excluir Conta</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+  </body>
+</html>
