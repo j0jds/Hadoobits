@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="card">
+      <h2 class="title">Entrar</h2>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <ul class="flashes">
+        {% for category, message in messages %} {% if 'login_error' in category
+        %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endif %} {% endfor %}
+      </ul>
+      {% endif %} {% endwith %}
+
+      <form
+        method="POST"
+        action="{{ url_for('login') }}"
+      >
+        <input
+          class="input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          class="input"
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="Senha"
+          required
+        />
+        <button type="submit" class="button_function">Entrar</button>
+      </form>
+      <nav>
+        <ul class="list">
+          <li class="list__element">
+            <a class="button" href="{{ url_for('home') }}">Voltar</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
