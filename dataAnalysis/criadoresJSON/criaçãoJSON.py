@@ -5,7 +5,7 @@ import os
 
 try:
     conn = sqlite3.connect('database.db')
-    query = "SELECT * FROM tarefa LIMIT 10;"
+    query = "SELECT * FROM tarefa LIMIT 2000;"
     df = pd.read_sql(query, conn)
 
     df.rename(columns={
