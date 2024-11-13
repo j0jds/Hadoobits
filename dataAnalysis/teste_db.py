@@ -9,9 +9,9 @@ if not os.path.exists(db_file):
 else:
     try:
         conn = sqlite3.connect(db_file)
-        print("Conexãp sucedida.")
+        print("Conexão sucedida.")
 
-        query = "SELECT * FROM membros"
+        query = "SELECT * FROM membros LIMIT 10"
         df = pd.read_sql_query(query, conn)
         
         print(df.head())
