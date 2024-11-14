@@ -15,4 +15,5 @@ Fornecer uma solução de visualização e gerenciamento de dados para empresas,
 O relatório detalhado do projeto e o Slide estão disponíveis [aqui](https://github.com/j0jds/Hadoobits/tree/main/collegeRelated).
 
 ## 🚀 Dashboard
-![dashboard](https://github.com/user-attachments/assets/f2ef1dec-363b-4ebe-aadf-6d2ddcb20d79) 
+![dashboard](https://github.com/user-attachments/assets/6989c685-8d24-4448-8268-1f990bed46f8)
+
