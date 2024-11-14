@@ -1,0 +1,5 @@
+Database is here -> https://mega.nz/file/x3lAmBYb#8P2EWNGqs3QzH6tt7G7z1v6B7lFs5PJbwYL_I7lFpag
+
+* Unable to add the database to the project due to the file size. GitHub does not allow files larger than 100 MB, and this one is 1 GB.
+
+After downloading the database.db file, add it to the dataAnalysis folder and proceed to run the project.
